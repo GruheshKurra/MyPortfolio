@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Karthik Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        const resumeData = {
+            personalInfo: {
+                fullName: "Gruhesh Sri Sai Karthik Kurra",
+                shortName: "Karthik",
+                title: "Data Scientist & AI Developer",
+                location: "Hyderabad, India",
+                email: "gruheshkurra2@gmail.com",
+                phone: "+91 8008258065",
+                linkedin: "https://linkedin.com/in/gruhesh-sri-sai-karthik-kurra-178249227",
+                github: "https://github.com/GruheshKurra"
+            },
+            experience: [
+                {
+                    title: "Research Intern",
+                    company: "IIIT Hyderabad",
+                    duration: "May 2024 - Present",
+                    type: "AI Research",
+                    responsibilities: [
+                        "Conducting research in advanced AI and machine learning",
+                        "Collaborating with professors on innovative solutions",
+                        "Developing cutting-edge AI models and architectures",
+                        "Contributing to research papers and publications"
+                    ]
+                },
+                {
+                    title: "API Development Intern",
+                    company: "InfoAjax",
+                    duration: "2024",
+                    type: "Development",
+                    responsibilities: [
+                        "Developing robust and scalable APIs",
+                        "Implementing modern API architectures",
+                        "Working on system integration projects",
+                        "Optimizing API performance and security"
+                    ]
+                },
+                {
+                    title: "Data Analyst",
+                    company: "XtraLeap",
+                    duration: "Jan 2024 - Apr 2024",
+                    responsibilities: [
+                        "Developed dynamic JSON update service",
+                        "Built comprehensive business intelligence dashboard",
+                        "Improved data synchronization across services",
+                        "Implemented data analytics solutions"
+                    ]
+                }
+            ],
+            education: {
+                degree: "B.Tech in Computer Science and Engineering",
+                institution: "KL University",
+                location: "Hyderabad, India",
+                duration: "2021-2025",
+                gpa: "9.65"
+            },
+            publications: [
+                {
+                    title: "Enhancing Neural Network Performance in Image Classification through Grayscale Preprocessing",
+                    journal: "International Journal of Computer Vision",
+                    date: "March 2024",
+                    link: "https://ijnrd.org/papers/IJNRD2411189.pdf",
+                    description: "Research on improving neural network performance through advanced preprocessing techniques."
+                }
+            ],
+            certifications: [
+                {
+                    title: "AWS Solutions Architect",
+                    issuer: "Amazon Web Services"
+                },
+                {
+                    title: "Google TensorFlow Developer",
+                    issuer: "Google"
+                },
+                {
+                    title: "Oracle Cloud Infrastructure 2024 Generative AI Professional",
+                    issuer: "Oracle"
+                },
+                {
+                    title: "Red Hat Certified Enterprise Application Developer",
+                    issuer: "Red Hat"
+                }
+            ],
+            skills: {
+                technical: [
+                    "AI/ML Development",
+                    "Full Stack Development",
+                    "Cloud Computing",
+                    "API Development",
+                    "Data Analysis"
+                ],
+                programming: [
+                    "Python",
+                    "JavaScript",
+                    "TypeScript",
+                    "Java",
+                    "C/C++"
+                ],
+                tools: [
+                    "TensorFlow",
+                    "PyTorch",
+                    "AWS",
+                    "Docker",
+                    "Git"
+                ]
+            }
+        };
+
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Helvetica', 'Arial', 'sans-serif'],
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Helvetica', Arial, sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #60A5FA, #34D399, #60A5FA);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 8s linear infinite;
+        }
+        .gradient-border {
+            background: linear-gradient(45deg, #60A5FA10, #34D39910);
+            border: 1px solid transparent;
+            border-image: linear-gradient(45deg, #60A5FA50, #34D39950) 1;
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px) scale(1.01);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .glass-effect {
+            background: rgba(17, 24, 39, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .timeline-card::before {
+            content: '';
+            position: absolute;
+            left: -1.5rem;
+            top: 0.5rem;
+            height: 1rem;
+            width: 1rem;
+            border-radius: 50%;
+            background: #60A5FA;
+            z-index: 1;
+        }
+        .timeline-card::after {
+            content: '';
+            position: absolute;
+            left: -1.25rem;
+            top: 1.5rem;
+            height: calc(100% + 1rem);
+            width: 2px;
+            background: linear-gradient(to bottom, #60A5FA, transparent);
+        }
+        @keyframes gradient {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white flex flex-col min-h-screen">
+    <nav class="glass-effect fixed w-full z-50 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="font-bold text-2xl gradient-text">
+                        <script>document.write(resumeData.personalInfo.shortName)</script>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400 transition-all duration-300">Home</a>
+                        <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400 transition-all duration-300">About</a>
+                        <a href="projects.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400 transition-all duration-300">Projects</a>
+                        <a href="resume.html" class="px-3 py-2 rounded-md text-sm font-medium text-blue-400 hover:text-blue-300 transition-all duration-300">Resume</a>
+                        <a href="skills.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400 transition-all duration-300">Skills</a>
+                        <a href="resources.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400 transition-all duration-300">Resources</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h1 class="text-5xl font-bold mb-4 gradient-text">Resume</h1>
+                <div class="flex justify-center space-x-4 mt-6">
+                    <a href="resume.pdf" download class="inline-flex items-center px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-700 transition duration-300">
+                        <i class="fas fa-download mr-2"></i>
+                        Download PDF
+                    </a>
+                    <a href="mailto:gruheshkurra2@gmail.com" class="inline-flex items-center px-6 py-3 bg-gray-700 rounded-lg hover:bg-gray-600 transition duration-300">
+                        <i class="fas fa-envelope mr-2"></i>
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2 space-y-8">
+                    <div class="bg-gray-800 p-8 rounded-lg shadow-xl card-hover gradient-border">
+                        <h2 class="text-2xl font-bold mb-6 gradient-text">Work Experience</h2>
+                        <div class="space-y-8">
+                            <script>
+                                resumeData.experience.forEach(exp => {
+                                    document.write(`
+                                        <div class="relative pl-6 timeline-card">
+                                            <h3 class="text-xl font-bold">${exp.title}</h3>
+                                            <p class="text-blue-400">${exp.company} | ${exp.duration}</p>
+                                            <ul class="mt-3 space-y-2 text-gray-300">
+                                                ${exp.responsibilities.map(resp => `
+                                                    <li class="flex items-start">
+                                                        <i class="fas fa-caret-right text-blue-400 mt-1.5 mr-2"></i>
+                                                        ${resp}
+                                                    </li>
+                                                `).join('')}
+                                            </ul>
+                                        </div>
+                                    `);
+                                });
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-800 p-8 rounded-lg shadow-xl card-hover gradient-border">
+                        <h2 class="text-2xl font-bold mb-6 gradient-text">Education</h2>
+                        <script>
+                            const edu = resumeData.education;
+                            document.write(`
+                                <div>
+                                    <h3 class="text-xl font-bold">${edu.degree}</h3>
+                                    <p class="text-blue-400">${edu.institution}</p>
+                                    <p class="text-gray-300">${edu.location}</p>
+                                    <p class="text-gray-300">${edu.duration}</p>
+                                    <p class="text-blue-400 mt-2">GPA: ${edu.gpa}</p>
+                                </div>
+                            `);
+                        </script>
+                    </div>
+
+                    <div class="bg-gray-800 p-8 rounded-lg shadow-xl card-hover gradient-border">
+                        <h2 class="text-2xl font-bold mb-6 gradient-text">Publications</h2>
+                        <div class="space-y-6">
+                            <script>
+                                resumeData.publications.forEach(pub => {
+                                    document.write(`
+                                        <div>
+                                            <h3 class="text-xl font-bold">${pub.title}</h3>
+                                            <p class="text-blue-400">${pub.journal} | ${pub.date}</p>
+                                            <p class="text-gray-300 mt-2">${pub.description}</p>
+                                            <a href="${pub.link}" target="_blank" 
+                                                class="text-blue-400 hover:text-blue-300 mt-2 inline-flex items-center">
+                                                View Publication
+                                                <i class="fas fa-external-link-alt ml-2"></i>
+                                            </a>
+                                        </div>
+                                    `);
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-xl card-hover gradient-border">
+                        <h2 class="text-xl font-bold mb-4 gradient-text">Technical Skills</h2>
+                        <script>
+                            Object.entries(resumeData.skills).forEach(([category, skills]) => {
+                                document.write(`
+                                    <div class="mb-4">
+                                        <h3 class="text-lg font-semibold mb-2 capitalize">${category}</h3>
+                                        <div class="flex flex-wrap gap-2">
+                                            ${skills.map(skill => `
+                                                <span class="px-3 py-1 bg-gray-700 rounded-full text-sm hover:bg-gray-600 transition duration-300">
+                                                    ${skill}
+                                                </span>
+                                            `).join('')}
+                                        </div>
+                                    </div>
+                                `);
+                            });
+                        </script>
+                    </div>
+
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-xl card-hover gradient-border">
+                        <h2 class="text-xl font-bold mb-4 gradient-text">Certifications</h2>
+                        <div class="space-y-3">
+                            <script>
+                                resumeData.certifications.forEach(cert => {
+                                    document.write(`
+                                        <div class="flex items-start">
+                                            <i class="fas fa-certificate text-blue-400 mt-1 mr-2"></i>
+                                            <div>
+                                                <p class="font-medium">${cert.title}</p>
+                                                <p class="text-sm text-gray-400">${cert.issuer}</p>
+                                            </div>
+                                        </div>
+                                    `);
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 mt-20">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <p>&copy; 2024 
+                    <script>document.write(skillsData.personalInfo.fullName)</script>
+                </p>
+                <div class="flex space-x-6">
+                    <a href="https://linkedin.com/in/gruhesh-sri-sai-karthik-kurra-178249227" target="_blank" class="hover:text-blue-400 transition duration-300">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="https://github.com/GruheshKurra" target="_blank" class="hover:text-blue-400 transition duration-300">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="mailto:gruheshkurra2@gmail.com" class="hover:text-blue-400 transition duration-300">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

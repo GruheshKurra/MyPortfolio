@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karthik - Data Scientist & AI Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Site-wide data store
+        const siteData = {
+            personalInfo: {
+                fullName: "Gruhesh Sri Sai Karthik Kurra",
+                shortName: "Karthik",
+                title: "Data Scientist & AI Developer",
+                location: "Hyderabad, India",
+                email: "gruheshkurra2@gmail.com",
+                linkedin: "https://linkedin.com/in/gruhesh-sri-sai-karthik-kurra-178249227",
+                github: "https://github.com/GruheshKurra"
+            },
+            latestAchievements: [
+                {
+                    title: "Research Internship",
+                    organization: "IIIT Hyderabad",
+                    description: "Selected for AI research internship",
+                    icon: "flask"
+                },
+                {
+                    title: "API Development Internship",
+                    organization: "InfoAjax",
+                    description: "Working on API development and integration",
+                    icon: "code"
+                },
+                {
+                    title: "Research Publication",
+                    organization: "Neural Network Performance Enhancement",
+                    description: "Published paper on image classification optimization",
+                    icon: "book"
+                }
+            ],
+            skills: {
+                primary: [
+                    "AI/ML Development",
+                    "Full Stack Development",
+                    "Cloud Computing"
+                ]
+            }
+        };
+
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Helvetica', 'Arial', 'sans-serif'],
+                    },
+                    animation: {
+                        'gradient': 'gradient 8s linear infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        gradient: {
+                            '0%, 100%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'left center'
+                            },
+                            '50%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'right center'
+                            }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Helvetica', Arial, sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #60A5FA, #34D399, #60A5FA);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 8s linear infinite;
+        }
+        .gradient-border {
+            background: linear-gradient(45deg, #60A5FA10, #34D39910);
+            border: 1px solid transparent;
+            border-image: linear-gradient(45deg, #60A5FA50, #34D39950) 1;
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px) scale(1.01);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .glass-effect {
+            background: rgba(17, 24, 39, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white flex flex-col min-h-screen">
+    <nav class="glass-effect fixed w-full z-50 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="font-bold text-2xl gradient-text">
+                        <script>document.write(siteData.personalInfo.shortName)</script>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-blue-400 hover:text-blue-300 transition-all duration-300">Home</a>
+                        <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400 transition-all duration-300">About</a>
+                        <a href="projects.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400 transition-all duration-300">Projects</a>
+                        <a href="resume.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400 transition-all duration-300">Resume</a>
+                        <a href="skills.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400 transition-all duration-300">Skills</a>
+                        <a href="resources.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400 transition-all duration-300">Resources</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-16">
+        <!-- Hero Section -->
+        <div class="relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-8">
+                        <div>
+                            <h1 class="text-5xl font-bold mb-4">
+                                <span class="gradient-text">
+                                    <script>document.write(siteData.personalInfo.fullName)</script>
+                                </span>
+                            </h1>
+                            <p class="text-2xl text-gray-300 mb-6">
+                                <script>document.write(siteData.personalInfo.title)</script>
+                            </p>
+                            <p class="text-lg text-gray-400 leading-relaxed">
+                                Specializing in AI research, development, and cloud computing. Currently engaged in research at IIIT Hyderabad and API development at InfoAjax.
+                            </p>
+                        </div>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="projects.html" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition duration-300">
+                                View Projects
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                            <a href="#" onclick="window.location.href='mailto:'+siteData.personalInfo.email" class="inline-flex items-center justify-center px-6 py-3 border border-gray-600 text-base font-medium rounded-md text-white hover:bg-gray-800 transition duration-300">
+                                Contact Me
+                                <i class="fas fa-envelope ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-800 p-8 rounded-lg shadow-xl card-hover gradient-border">
+                        <h2 class="text-2xl font-bold mb-6 gradient-text">Latest Achievements</h2>
+                        <div class="space-y-6" id="achievements-container">
+                            <script>
+                                siteData.latestAchievements.forEach(achievement => {
+                                    document.write(`
+                                        <div class="flex items-start">
+                                            <i class="fas fa-${achievement.icon} text-blue-400 mt-1 mr-3 text-xl"></i>
+                                            <div>
+                                                <h3 class="font-medium text-lg">${achievement.title}</h3>
+                                                <p class="text-gray-400">${achievement.organization}</p>
+                                                <p class="text-gray-300 text-sm mt-1">${achievement.description}</p>
+                                            </div>
+                                        </div>
+                                    `);
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills Overview -->
+        <div class="bg-gray-800/50 py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Core Expertise</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="skills-container">
+                    <script>
+                        siteData.skills.primary.forEach((skill, index) => {
+                            const icons = ['brain', 'code', 'cloud'];
+                            document.write(`
+                                <div class="bg-gray-800 p-6 rounded-lg shadow-xl card-hover gradient-border">
+                                    <div class="flex items-center mb-4">
+                                        <i class="fas fa-${icons[index]} text-4xl text-blue-400 mr-4"></i>
+                                        <h3 class="text-xl font-bold">${skill}</h3>
+                                    </div>
+                                </div>
+                            `);
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <p>&copy; 2024 
+                    <script>document.write(siteData.personalInfo.fullName)</script>
+                </p>
+                <div class="flex space-x-6">
+                    <a href="javascript:void(0)" onclick="window.open(siteData.personalInfo.linkedin)" class="hover:text-blue-400 transition duration-300">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="javascript:void(0)" onclick="window.open(siteData.personalInfo.github)" class="hover:text-blue-400 transition duration-300">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="javascript:void(0)" onclick="window.location.href='mailto:'+siteData.personalInfo.email" class="hover:text-blue-400 transition duration-300">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visionary AI - Gruhesh Kurra Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white flex flex-col min-h-screen">
+    <!-- Navbar -->
+    <nav class="bg-gray-800 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="font-normal text-xl">Gruhesh Kurra</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition duration-300">Home</a>
+                        <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition duration-300">About</a>
+                        <a href="projects.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition duration-300">Projects</a>
+                        <a href="resume.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition duration-300">Resume</a>
+                        <a href="skills.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition duration-300">Skills</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <h1 class="text-5xl font-normal mb-8 text-blue-400">Visionary AI</h1>
+            <img src="./images/p2.png" alt="Visionary AI" class="w-full h-100 object-cover rounded-lg mb-8">
+            
+            <!-- Project Overview -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-xl mb-8">
+                <h2 class="text-2xl font-normal mb-4">Project Overview</h2>
+                <p class="mb-4">Visionary AI is a comprehensive AI platform integrating cutting-edge models for various AI tasks such as image classification, text-to-image generation, and more. This platform leverages advanced machine learning models to offer diverse AI-powered functionalities.</p>
+                <h3 class="text-xl font-normal mb-2">Key Features:</h3>
+                <ul class="list-disc list-inside mb-4">
+                    <li>AI-powered image generation from text descriptions</li>
+                    <li>Real-time video generation based on user prompts</li>
+                    <li>Interactive chatbot for AI assistance</li>
+                    <li>Scalable backend and frontend using modern web technologies</li>
+                </ul>
+                <h3 class="text-xl font-normal mb-2">Technologies Used:</h3>
+                <ul class="list-disc list-inside mb-4">
+                    <li>Python and FastAPI for backend</li>
+                    <li>React.js and TailwindCSS for frontend</li>
+                    <li>TensorFlow and Hugging Face for AI models</li>
+                    <li>AWS for cloud infrastructure and scaling</li>
+                    <li>Docker for containerization and deployment</li>
+                </ul>
+            </div>
+            
+            <!-- My Role -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-xl mb-8">
+                <h2 class="text-2xl font-normal mb-4">My Role</h2>
+                <p>As the lead developer on this project, I was responsible for:</p>
+                <ul class="list-disc list-inside mb-4">
+                    <li>Designing and implementing the core AI functionalities</li>
+                    <li>Developing the backend using FastAPI for the AI services</li>
+                    <li>Building the frontend with React.js and TailwindCSS for a user-friendly experience</li>
+                    <li>Integrating the AI models (text-to-image, video generation, chatbots) into the platform</li>
+                    <li>Deploying the application on AWS using Docker containers</li>
+                </ul>
+            </div>
+
+            <!-- Challenges and Solutions -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-xl mb-8">
+                <h2 class="text-2xl font-normal mb-4">Challenges and Solutions</h2>
+                <ul class="list-disc list-inside mb-4">
+                    <li><strong>Challenge:</strong> Efficiently scaling the platform to handle heavy AI processing loads.<br>
+                        <strong>Solution:</strong> Implemented serverless functions using AWS Lambda for handling intensive AI tasks.</li>
+                    <li><strong>Challenge:</strong> Integrating multiple AI models for different tasks in a unified system.<br>
+                        <strong>Solution:</strong> Developed a microservices-based architecture to separate AI models into individual services.</li>
+                    <li><strong>Challenge:</strong> Ensuring seamless communication between frontend and backend for real-time AI tasks.<br>
+                        <strong>Solution:</strong> Used WebSockets for real-time communication and integrated a message queue system for task handling.</li>
+                </ul>
+            </div>
+            
+            <!-- External Links -->
+            <div class="flex justify-between items-center">
+                <a href="#" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-normal py-2 px-4 rounded transition duration-300">
+                    Visit Website
+                </a>
+                <a href="https://github.com/GruheshKurra/visionary-ai" target="_blank" class="bg-gray-600 hover:bg-gray-700 text-white font-normal py-2 px-4 rounded transition duration-300">
+                    View on GitHub
+                </a>
+            </div>
+
+            <!-- Project Demo (YouTube Video) -->
+            <div class="mt-8">
+                <h2 class="text-2xl font-normal mb-4">Project Demo</h2>
+                <div class="relative" style="padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                    <iframe 
+                        src="https://www.youtube.com/embed/CZOL-KIhKA4" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen 
+                        class="absolute top-0 left-0 w-full h-full"
+                        style="height: 400px;"
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 mt-auto">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div>
+                    <p>&copy; 2024 Gruhesh Sri Sai Karthik Kurra</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="https://linkedin.com/in/gruhesh-sri-sai-karthik-kurra-178249227" target="_blank" class="hover:text-gray-300 transition duration-300">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/GruheshKurra" target="_blank" class="hover:text-gray-300 transition duration-300">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:gruheshkurra2@gmail.com" class="hover:text-gray-300 transition duration-300">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

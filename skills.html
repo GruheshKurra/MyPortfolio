@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Karthik Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        const skillsData = {
+            personalInfo: {
+                fullName: "Gruhesh Sri Sai Karthik Kurra",
+                shortName: "Karthik"
+            },
+            skillSets: [
+                {
+                    category: "AI/ML",
+                    icon: "brain",
+                    skills: ["TensorFlow", "PyTorch", "Hugging Face", "LangChain", "RAG", "Gradio", "Streamlit"]
+                },
+                {
+                    category: "Programming",
+                    icon: "code",
+                    skills: ["Python", "JavaScript", "TypeScript", "Java", "C", "C++", "R"]
+                },
+                {
+                    category: "Web Development",
+                    icon: "globe",
+                    skills: ["React.js", "Next.js", "Vue.js", "FastAPI", "Node.js", "Express.js"]
+                },
+                {
+                    category: "Cloud & DevOps",
+                    icon: "cloud",
+                    skills: ["AWS", "Google Cloud", "Vercel", "Docker", "Git", "CI/CD"]
+                },
+                {
+                    category: "Databases",
+                    icon: "database",
+                    skills: ["PostgreSQL", "MongoDB", "Supabase", "Firebase", "SQL"]
+                },
+                {
+                    category: "Data Analysis",
+                    icon: "chart-bar",
+                    skills: ["Pandas", "NumPy", "Matplotlib", "Seaborn", "Tableau", "OpenCV"]
+                }
+            ],
+            certifications: [
+                {
+                    title: "AWS Cloud Practitioner",
+                    image: "certificates/c1.png",
+                    issuer: "Amazon Web Services",
+                    description: "Comprehensive understanding of AWS Cloud"
+                },
+                {
+                    title: "AWS Solutions Architect",
+                    image: "certificates/c2.png",
+                    issuer: "Amazon Web Services",
+                    description: "Advanced AWS architecture expertise"
+                },
+                {
+                    title: "TensorFlow Developer",
+                    image: "certificates/c3.png",
+                    issuer: "Google",
+                    description: "ML/DL with TensorFlow certification"
+                },
+                {
+                    title: "Red Hat Certified",
+                    image: "certificates/c4.png",
+                    issuer: "Red Hat",
+                    description: "Enterprise Application Developer"
+                },
+                {
+                    title: "OCI Gen AI Professional",
+                    image: "certificates/c5.png",
+                    issuer: "Oracle",
+                    description: "2024 Generative AI Certified"
+                },
+                {
+                    title: "OCI Architect Associate",
+                    image: "certificates/c6.png",
+                    issuer: "Oracle",
+                    description: "2023 Cloud Architecture Certified"
+                }
+            ]
+        };
+
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Helvetica', 'Arial', 'sans-serif'],
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Helvetica', Arial, sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #60A5FA, #34D399, #60A5FA);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 8s linear infinite;
+        }
+        .gradient-border {
+            background: linear-gradient(45deg, #60A5FA10, #34D39910);
+            border: 1px solid transparent;
+            border-image: linear-gradient(45deg, #60A5FA50, #34D39950) 1;
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px) scale(1.01);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .glass-effect {
+            background: rgba(17, 24, 39, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        @keyframes gradient {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+        .skill-pill {
+            transition: all 0.3s ease;
+        }
+        .skill-pill:hover {
+            transform: translateX(5px);
+            background-color: rgba(96, 165, 250, 0.2);
+        }
+        .cert-image {
+            transition: all 0.3s ease;
+        }
+        .cert-image:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white flex flex-col min-h-screen">
+    <nav class="glass-effect fixed w-full z-50 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="font-bold text-2xl gradient-text">
+                        <script>document.write(skillsData.personalInfo.shortName)</script>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400 transition-all duration-300">Home</a>
+                        <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400 transition-all duration-300">About</a>
+                        <a href="projects.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400 transition-all duration-300">Projects</a>
+                        <a href="resume.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400 transition-all duration-300">Resume</a>
+                        <a href="skills.html" class="px-3 py-2 rounded-md text-sm font-medium text-blue-400 hover:text-blue-300 transition-all duration-300">Skills</a>
+                        <a href="resources.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400 transition-all duration-300">Resources</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h1 class="text-5xl font-bold mb-4 gradient-text">Skills & Certifications</h1>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Technical expertise and professional certifications
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <script>
+                    skillsData.skillSets.forEach(skillSet => {
+                        document.write(`
+                            <div class="bg-gray-800 p-6 rounded-lg shadow-xl card-hover gradient-border">
+                                <div class="flex items-center mb-6">
+                                    <i class="fas fa-${skillSet.icon} text-4xl text-blue-400 mr-4"></i>
+                                    <h2 class="text-2xl font-bold gradient-text">${skillSet.category}</h2>
+                                </div>
+                                <ul class="space-y-3">
+                                    ${skillSet.skills.map(skill => `
+                                        <li class="flex items-center skill-pill pl-2 py-1 rounded-lg">
+                                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                                            ${skill}
+                                        </li>
+                                    `).join('')}
+                                </ul>
+                            </div>
+                        `);
+                    });
+                </script>
+            </div>
+
+            <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Professional Certifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <script>
+                    skillsData.certifications.forEach(cert => {
+                        document.write(`
+                            <div class="bg-gray-800 p-6 rounded-lg shadow-xl card-hover gradient-border overflow-hidden">
+                                <img src="${cert.image}" alt="${cert.title}" 
+                                    class="w-full h-48 object-cover rounded-lg mb-4 cert-image">
+                                <div class="space-y-2">
+                                    <h3 class="text-xl font-bold">${cert.title}</h3>
+                                    <p class="text-gray-400">${cert.issuer}</p>
+                                    <p class="text-gray-300 text-sm">${cert.description}</p>
+                                </div>
+                            </div>
+                        `);
+                    });
+                </script>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 mt-20">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <p>&copy; 2024 
+                    <script>document.write(skillsData.personalInfo.fullName)</script>
+                </p>
+                <div class="flex space-x-6">
+                    <a href="https://linkedin.com/in/gruhesh-sri-sai-karthik-kurra-178249227" target="_blank" class="hover:text-blue-400 transition duration-300">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="https://github.com/GruheshKurra" target="_blank" class="hover:text-blue-400 transition duration-300">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="mailto:gruheshkurra2@gmail.com" class="hover:text-blue-400 transition duration-300">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

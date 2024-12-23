@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Karthik Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        const projectsData = {
+            personalInfo: {
+                fullName: "Gruhesh Sri Sai Karthik Kurra",
+                shortName: "Karthik"
+            },
+            projects: [
+                {
+                    id: 1,
+                    title: "Zynthetix",
+                    description: "A SaaS platform for synthetic data generation using AI, focusing on text and image creation.",
+                    image: "images/p1.png",
+                    category: "ai",
+                    technologies: ["TensorFlow", "PyTorch", "React.js", "AWS", "Docker"],
+                    githubUrl: "https://github.com/YourGitHubUsername/zynthetix",
+                    features: [
+                        "Advanced AI models for synthetic data generation",
+                        "Focus on text and image creation",
+                        "Scalable cloud architecture",
+                        "User-friendly interface for customizing parameters"
+                    ]
+                },
+                {
+                    id: 2,
+                    title: "Visionary AI",
+                    description: "Comprehensive AI platform integrating cutting-edge models for various AI tasks.",
+                    image: "images/p2.png",
+                    category: "ai",
+                    technologies: ["Python", "FastAPI", "React.js", "AWS", "TensorFlow"],
+                    githubUrl: "https://github.com/GruheshKurra/visionary-ai",
+                    features: [
+                        "AI-powered image generation",
+                        "Real-time video generation",
+                        "Interactive chatbot",
+                        "Scalable backend"
+                    ]
+                },
+                {
+                    id: 3,
+                    title: "Gesture-Based Mouse Control",
+                    description: "System for controlling computer mouse functions through hand gestures.",
+                    image: "images/p3.png",
+                    category: "ai",
+                    technologies: ["Python", "OpenCV", "MediaPipe", "PyAutoGUI"],
+                    githubUrl: "https://github.com/GruheshKurra/Hand-Gesture-Based-Mouse-Control",
+                    features: [
+                        "Real-time hand tracking",
+                        "Gesture recognition",
+                        "Customizable controls",
+                        "Accessibility features"
+                    ]
+                },
+                {
+                    id: 4,
+                    title: "FastAPI Chat App",
+                    description: "Real-time chat application using FastAPI and WebSocket.",
+                    image: "images/p4.png",
+                    category: "web",
+                    technologies: ["FastAPI", "WebSocket", "MongoDB", "Python", "JWT"],
+                    githubUrl: "https://github.com/GruheshKurra/FastAPI_ChatApp",
+                    features: [
+                        "Real-time messaging",
+                        "User authentication",
+                        "Message history",
+                        "Group chat functionality"
+                    ]
+                },
+                {
+                    id: 5,
+                    title: "Blog Manager (FarmStack)",
+                    description: "Full-stack blog platform with rich text editing.",
+                    image: "images/p5.png",
+                    category: "web",
+                    technologies: ["FastAPI", "React.js", "MongoDB", "Redux"],
+                    githubUrl: "https://github.com/GruheshKurra/FastAPI-Blogpost-App",
+                    features: [
+                        "Rich text editing",
+                        "User authentication",
+                        "Comment system",
+                        "Tag-based categorization"
+                    ]
+                },
+                {
+                    id: 6,
+                    title: "AI Voice Assistant",
+                    description: "Windows-based AI assistant using NLP and speech recognition.",
+                    image: "images/p6.png",
+                    category: "ai",
+                    technologies: ["Python", "NLTK", "Speech Recognition", "PyAutoGUI"],
+                    githubUrl: "https://github.com/GruheshKurra/AI-Voice-Assistant-for-Windows",
+                    features: [
+                        "Voice command recognition",
+                        "System control automation",
+                        "Email drafting and sending",
+                        "Smart home integration"
+                    ]
+                },
+                {
+                    id: 7,
+                    title: "Email Spam Detection",
+                    description: "Machine learning project for email classification.",
+                    image: "images/p7.png",
+                    category: "ai",
+                    technologies: ["R", "Machine Learning", "NLP", "Text Analysis"],
+                    githubUrl: "https://github.com/GruheshKurra/Spam_or_Ham",
+                    features: [
+                        "Advanced text preprocessing",
+                        "Multiple classification algorithms",
+                        "Hyperparameter tuning",
+                        "Comprehensive evaluation"
+                    ]
+                },
+                {
+                    id: 8,
+                    title: "E-commerce Website",
+                    description: "Full-featured online store using Java technologies.",
+                    image: "images/p8.png",
+                    category: "web",
+                    technologies: ["Java EE", "JSP", "MySQL", "PayPal API"],
+                    githubUrl: "https://github.com/GruheshKurra/Ecommerce-java",
+                    features: [
+                        "User authentication",
+                        "Product catalog",
+                        "Shopping cart",
+                        "Secure payment integration"
+                    ]
+                },
+                {
+                    id: 9,
+                    title: "AWS Gallery App",
+                    description: "Cloud-based photo storage and sharing application.",
+                    image: "images/p9.png",
+                    category: "web",
+                    technologies: ["React.js", "AWS Amplify", "S3", "DynamoDB"],
+                    githubUrl: "https://github.com/GruheshKurra/aws-project",
+                    features: [
+                        "Secure photo storage",
+                        "User authentication",
+                        "Album management",
+                        "Photo sharing capabilities"
+                    ]
+                }
+            ],
+            categories: [
+                { id: "all", name: "All Projects" },
+                { id: "ai", name: "AI/ML" },
+                { id: "web", name: "Web Development" }
+            ]
+        };
+
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Helvetica', 'Arial', 'sans-serif'],
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Helvetica', Arial, sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #60A5FA, #34D399, #60A5FA);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 8s linear infinite;
+        }
+        .gradient-border {
+            background: linear-gradient(45deg, #60A5FA10, #34D39910);
+            border: 1px solid transparent;
+            border-image: linear-gradient(45deg, #60A5FA50, #34D39950) 1;
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px) scale(1.01);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .glass-effect {
+            background: rgba(17, 24, 39, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .modal {
+            backdrop-filter: blur(8px);
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        @keyframes gradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        .slide-up {
+            animation: slideUp 0.3s ease-out;
+        }
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white flex flex-col min-h-screen">
+    <!-- Navigation -->
+    <nav class="glass-effect fixed w-full z-50 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="font-bold text-2xl gradient-text">
+                        <script>document.write(projectsData.personalInfo.shortName)</script>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400 transition-all duration-300">Home</a>
+                        <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400 transition-all duration-300">About</a>
+                        <a href="projects.html" class="px-3 py-2 rounded-md text-sm font-medium text-blue-400 hover:text-blue-300 transition-all duration-300">Projects</a>
+                        <a href="resume.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400 transition-all duration-300">Resume</a>
+                        <a href="skills.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400 transition-all duration-300">Skills</a>
+                        <a href="resources.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400 transition-all duration-300">Resources</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="fixed inset-0 z-50 flex items-center justify-center hidden modal" onclick="closeProjectModal()">
+        <div class="max-w-6xl w-full mx-4 lg:mx-auto" onclick="event.stopPropagation()">
+            <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden slide-up">
+                <div class="flex justify-between items-center p-6 border-b border-gray-700">
+                    <h3 id="modalTitle" class="text-2xl font-bold gradient-text"></h3>
+                    <button onclick="closeProjectModal()" class="text-gray-400 hover:text-white">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div class="p-6 space-y-6 max-h-[80vh] overflow-y-auto">
+                    <div id="modalContent"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="flex-grow pt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h1 class="text-5xl font-bold mb-4 gradient-text">My Projects</h1>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    A showcase of my technical projects spanning AI/ML, web development, and cloud computing.
+                </p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="mb-12">
+                <div class="flex flex-wrap gap-4 justify-center" id="category-filters">
+                    <script>
+                        projectsData.categories.forEach(category => {
+                            document.write(`
+                                <button onclick="filterProjects('${category.id}')" 
+                                    class="px-4 py-2 rounded-full bg-gray-800 hover:bg-gray-700 transition duration-300">
+                                    ${category.name}
+                                </button>
+                            `);
+                        });
+                    </script>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+                <script>
+                    projectsData.projects.forEach(project => {
+                        document.write(`
+                            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl card-hover gradient-border cursor-pointer"
+                                 data-category="${project.category}"
+                                 data-project-id="${project.id}"
+                                 onclick="openProjectModal(projectsData.projects.find(p => p.id === ${project.id}))">
+                                <img src="${project.image}" alt="${project.title}" class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">${project.title}</h3>
+                                    <p class="text-gray-400 mb-4">${project.description}</p>
+                                    <div class="mb-4">
+                                        <div class="flex flex-wrap gap-2">
+                                            ${project.technologies.slice(0, 3).map(tech => `
+                                                <span class="px-2 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">${tech}</span>
+                                            `).join('')}
+                                            ${project.technologies.length > 3 ? `
+                                                <span class="px-2 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">
+                                                    +${project.technologies.length - 3} more
+                                                </span>
+                                            ` : ''}
+                                        </div>
+                                    </div>
+                                    <div class="text-gray-400">
+                                        <i class="fas fa-eye mr-2"></i>Click to view details
+                                    </div>
+                                </div>
+                            </div>
+                        `);
+                    });
+                </script>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 mt-20">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <p>&copy; 2024 
+                    <script>document.write(projectsData.personalInfo.fullName)</script>
+                </p>
+                <div class="flex space-x-6">
+                    <a href="https://linkedin.com/in/gruhesh-sri-sai-karthik-kurra-178249227" target="_blank" class="hover:text-blue-400 transition duration-300">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="https://github.com/GruheshKurra" target="_blank" class="hover:text-blue-400 transition duration-300">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="mailto:gruheshkurra2@gmail.com" class="hover:text-blue-400 transition duration-300">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openProjectModal(project) {
+            const modal = document.getElementById('projectModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalContent = document.getElementById('modalContent');
+
+            modalTitle.textContent = project.title;
+
+            let contentHTML = `
+                <div class="space-y-6">
+                    <img src="${project.image}" alt="${project.title}" class="w-full h-64 object-cover rounded-lg">
+                    
+                    <div class="space-y-4">
+                        <h4 class="text-xl font-semibold text-blue-400">Description</h4>
+                        <p class="text-gray-300">${project.longDescription || project.description}</p>
+                    </div>
+
+                    ${project.videoUrl ? `
+                        <div class="space-y-4">
+                            <h4 class="text-xl font-semibold text-blue-400">Project Demo</h4>
+                            <div class="relative" style="padding-bottom: 56.25%;">
+                                <iframe src="${project.videoUrl}" 
+                                        class="absolute top-0 left-0 w-full h-full rounded-lg"
+                                        allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                    ` : ''}
+
+                    <div class="space-y-4">
+                        <h4 class="text-xl font-semibold text-blue-400">Technologies Used</h4>
+                        <div class="flex flex-wrap gap-2">
+                            ${project.technologies.map(tech => `
+                                <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">${tech}</span>
+                            `).join('')}
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h4 class="text-xl font-semibold text-blue-400">Key Features</h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300">
+                            ${project.features.map(feature => `
+                                <li>${feature}</li>
+                            `).join('')}
+                        </ul>
+                    </div>
+
+                    ${project.challenges ? `
+                        <div class="space-y-4">
+                            <h4 class="text-xl font-semibold text-blue-400">Challenges & Solutions</h4>
+                            <ul class="list-disc list-inside space-y-2 text-gray-300">${project.challenges.map(challenge => `
+                                   <li>${challenge}</li>
+                               `).join('')}
+                           </ul>
+                       </div>
+                   ` : ''}
+
+                   <div class="flex space-x-4">
+                       ${project.githubUrl ? `
+                           <a href="${project.githubUrl}" target="_blank" 
+                               class="px-4 py-2 bg-gray-700 rounded hover:bg-gray-600 transition duration-300 inline-flex items-center">
+                               <i class="fab fa-github mr-2"></i> View Code
+                           </a>
+                       ` : ''}
+                       ${project.liveUrl ? `
+                           <a href="${project.liveUrl}" target="_blank" 
+                               class="px-4 py-2 bg-blue-600 rounded hover:bg-blue-700 transition duration-300 inline-flex items-center">
+                               <i class="fas fa-external-link-alt mr-2"></i> Live Demo
+                           </a>
+                       ` : ''}
+                   </div>
+               </div>
+           `;
+
+           modalContent.innerHTML = contentHTML;
+           modal.classList.remove('hidden');
+           document.body.style.overflow = 'hidden';
+       }
+
+       function closeProjectModal() {
+           const modal = document.getElementById('projectModal');
+           modal.classList.add('hidden');
+           document.body.style.overflow = 'auto';
+       }
+
+       function filterProjects(category) {
+           const projects = document.querySelectorAll('#projects-grid > div');
+           projects.forEach(project => {
+               if (category === 'all' || project.dataset.category === category) {
+                   project.style.display = 'block';
+               } else {
+                   project.style.display = 'none';
+               }
+           });
+
+           document.querySelectorAll('button').forEach(btn => {
+               if (btn.textContent.toLowerCase().includes(category)) {
+                   btn.classList.remove('bg-gray-700');
+                   btn.classList.add('bg-blue-600');
+               } else {
+                   btn.classList.add('bg-gray-700');
+                   btn.classList.remove('bg-blue-600');
+               }
+           });
+       }
+
+       document.addEventListener('keydown', function(e) {
+           if (e.key === 'Escape') {
+               closeProjectModal();
+           }
+       });
+   </script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zynthetix - Gruhesh Kurra Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white flex flex-col min-h-screen">
+    <!-- Navbar -->
+    <nav class="bg-gray-800 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="font-normal text-xl">Gruhesh Kurra</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition duration-300">Home</a>
+                        <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition duration-300">About</a>
+                        <a href="projects.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition duration-300">Projects</a>
+                        <a href="resume.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition duration-300">Resume</a>
+                        <a href="skills.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition duration-300">Skills</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <h1 class="text-5xl font-normal mb-8 text-blue-400">Zynthetix</h1>
+            <img src="./images/p1.png" alt="Zynthetix" class="w-full h-100 object-cover rounded-lg mb-8">
+            
+            <!-- Project Overview -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-xl mb-8">
+                <h2 class="text-2xl font-normal mb-4">Project Overview</h2>
+                <p class="mb-4">Zynthetix is a Software as a Service (SaaS) platform for synthetic data generation using AI, focusing on text and image creation. The platform addresses data scarcity and privacy concerns in AI/ML development by producing high-quality, diverse synthetic datasets.</p>
+                <h3 class="text-xl font-normal mb-2">Key Features:</h3>
+                <ul class="list-disc list-inside mb-4">
+                    <li>Advanced AI models for synthetic data generation</li>
+                    <li>Focus on text and image creation</li>
+                    <li>Scalable cloud architecture for efficient data generation and distribution</li>
+                    <li>User-friendly interface for customizing data generation parameters</li>
+                </ul>
+                <h3 class="text-xl font-normal mb-2">Technologies Used:</h3>
+                <ul class="list-disc list-inside mb-4">
+                    <li>Python for backend processing and AI model integration</li>
+                    <li>TensorFlow and PyTorch for AI models</li>
+                    <li>React.js for the frontend interface</li>
+                    <li>AWS for cloud infrastructure and scaling</li>
+                    <li>Docker for containerization and deployment</li>
+                </ul>
+            </div>
+            
+            <!-- My Role -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-xl mb-8">
+                <h2 class="text-2xl font-normal mb-4">My Role</h2>
+                <p>As the lead developer on this project, I was responsible for:</p>
+                <ul class="list-disc list-inside mb-4">
+                    <li>Architecting the overall system design</li>
+                    <li>Implementing the core AI models for data generation</li>
+                    <li>Developing the backend API using FastAPI</li>
+                    <li>Creating the frontend user interface with React.js</li>
+                    <li>Setting up the cloud infrastructure on AWS</li>
+                    <li>Ensuring data privacy and security compliance</li>
+                </ul>
+            </div>
+
+            <!-- Challenges and Solutions -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-xl mb-8">
+                <h2 class="text-2xl font-normal mb-4">Challenges and Solutions</h2>
+                <ul class="list-disc list-inside mb-4">
+                    <li><strong>Challenge:</strong> Ensuring the quality and diversity of generated data.<br>
+                        <strong>Solution:</strong> Implemented advanced GAN models and fine-tuned them on diverse datasets.</li>
+                    <li><strong>Challenge:</strong> Scaling the system to handle large-scale data generation requests.<br>
+                        <strong>Solution:</strong> Utilized AWS auto-scaling groups and implemented a queue-based processing system.</li>
+                    <li><strong>Challenge:</strong> Maintaining data privacy and preventing potential misuse.<br>
+                        <strong>Solution:</strong> Implemented strict access controls and data anonymization techniques.</li>
+                </ul>
+            </div>
+            
+            <!-- External Links -->
+            <div class="flex justify-between items-center">
+                <a href="https://www.zynthetix.com/" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-normal py-2 px-4 rounded transition duration-300">
+                    Visit Website
+                </a>
+                <a href="https://github.com/YourGitHubUsername/zynthetix" target="_blank" class="bg-gray-600 hover:bg-gray-700 text-white font-normal py-2 px-4 rounded transition duration-300">
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 mt-auto">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div>
+                    <p>&copy; 2024 Gruhesh Sri Sai Karthik Kurra</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="https://linkedin.com/in/gruhesh-sri-sai-karthik-kurra-178249227" target="_blank" class="hover:text-gray-300 transition duration-300">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/GruheshKurra" target="_blank" class="hover:text-gray-300 transition duration-300">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:gruheshkurra2@gmail.com" class="hover:text-gray-300 transition duration-300">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

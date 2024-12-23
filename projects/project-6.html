@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Voice Assistant for Windows - Gruhesh Kurra Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white flex flex-col min-h-screen">
+    <!-- Navbar -->
+    <nav class="bg-gray-800 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="font-normal text-xl">Gruhesh Kurra</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition duration-300">Home</a>
+                        <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition duration-300">About</a>
+                        <a href="projects.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition duration-300">Projects</a>
+                        <a href="resume.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition duration-300">Resume</a>
+                        <a href="skills.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition duration-300">Skills</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <h1 class="text-5xl font-normal mb-8 text-blue-400">AI Voice Assistant for Windows</h1>
+            
+            <!-- Project Overview -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-xl mb-8">
+                <h2 class="text-2xl font-normal mb-4">Project Overview</h2>
+                <p class="mb-4">The AI Voice Assistant for Windows is an innovative application that enables users to control their Windows operating system and perform various tasks using voice commands. This project demonstrates the integration of speech recognition, natural language processing, and system automation technologies.</p>
+                <h3 class="text-xl font-normal mb-2">Key Features:</h3>
+                <ul class="list-disc list-inside mb-4">
+                    <li>Voice-activated system control for Windows</li>
+                    <li>Natural language processing for understanding user commands</li>
+                    <li>Ability to open applications, perform system tasks, and execute custom commands</li>
+                    <li>Customizable voice commands and responses</li>
+                    <li>Integration with Windows APIs for seamless system interaction</li>
+                </ul>
+                <h3 class="text-xl font-normal mb-2">Technologies Used:</h3>
+                <ul class="list-disc list-inside mb-4">
+                    <li>Python for core development</li>
+                    <li>Speech Recognition library for voice input processing</li>
+                    <li>Natural Language Toolkit (NLTK) for command interpretation</li>
+                    <li>PyAutoGUI for system control and automation</li>
+                    <li>Windows API integration for advanced system functions</li>
+                </ul>
+            </div>
+            
+            <!-- My Role -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-xl mb-8">
+                <h2 class="text-2xl font-normal mb-4">My Role</h2>
+                <p>As the developer of this project, I was responsible for:</p>
+                <ul class="list-disc list-inside mb-4">
+                    <li>Designing and implementing the core voice assistant functionality</li>
+                    <li>Integrating speech recognition and natural language processing capabilities</li>
+                    <li>Developing custom commands for Windows system control</li>
+                    <li>Creating a user-friendly interface for configuration and interaction</li>
+                    <li>Optimizing performance for real-time voice processing and command execution</li>
+                    <li>Testing and debugging across various Windows environments</li>
+                </ul>
+            </div>
+
+            <!-- Challenges and Solutions -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-xl mb-8">
+                <h2 class="text-2xl font-normal mb-4">Challenges and Solutions</h2>
+                <ul class="list-disc list-inside mb-4">
+                    <li><strong>Challenge:</strong> Accurately interpreting diverse voice commands and accents.<br>
+                        <strong>Solution:</strong> Implemented advanced NLP techniques and trained the system on a wide range of voice samples to improve recognition accuracy.</li>
+                    <li><strong>Challenge:</strong> Ensuring system security while allowing voice-controlled operations.<br>
+                        <strong>Solution:</strong> Developed a robust authentication system and implemented permission levels for different types of commands.</li>
+                    <li><strong>Challenge:</strong> Minimizing system resource usage for background operation.<br>
+                        <strong>Solution:</strong> Optimized code for efficient processing and implemented intelligent sleep/wake cycles to reduce CPU load.</li>
+                </ul>
+            </div>
+
+            <!-- External Links -->
+            <div class="flex justify-center items-center">
+                <a href="https://github.com/GruheshKurra/AI-Voice-Assistant-for-Windows" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-normal py-2 px-4 rounded transition duration-300">
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 mt-auto">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div>
+                    <p>&copy; 2024 Gruhesh Sri Sai Karthik Kurra</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="https://linkedin.com/in/gruhesh-sri-sai-karthik-kurra-178249227" target="_blank" class="hover:text-gray-300 transition duration-300">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/GruheshKurra" target="_blank" class="hover:text-gray-300 transition duration-300">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:gruheshkurra2@gmail.com" class="hover:text-gray-300 transition duration-300">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

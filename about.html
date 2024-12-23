@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Karthik Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        const aboutData = {
+            personalInfo: {
+                fullName: "Gruhesh Sri Sai Karthik Kurra",
+                shortName: "Karthik",
+                title: "Data Scientist & AI Developer",
+                location: "Hyderabad, India",
+                email: "gruheshkurra2@gmail.com",
+                phone: "+91 8008258065",
+                linkedin: "https://linkedin.com/in/gruhesh-sri-sai-karthik-kurra-178249227",
+                github: "https://github.com/GruheshKurra",
+                education: {
+                    degree: "B.Tech in Computer Science and Engineering",
+                    institution: "KL University",
+                    duration: "2021-2025",
+                    gpa: "9.65"
+                },
+                languages: [
+                    { name: "English", level: "Fluent" },
+                    { name: "Telugu", level: "Native" },
+                    { name: "Hindi", level: "Fluent" }
+                ]
+            },
+            experience: [
+                {
+                    title: "Research Intern",
+                    company: "IIIT Hyderabad",
+                    duration: "May 2024 - Present",
+                    type: "AI Research",
+                    description: [
+                        "Engaged in advanced AI research projects",
+                        "Collaborating with leading professors",
+                        "Focus on machine learning innovations"
+                    ]
+                },
+                {
+                    title: "API Development Intern",
+                    company: "InfoAjax",
+                    duration: "2024",
+                    type: "Development",
+                    description: [
+                        "Working on API development and integration",
+                        "Building scalable backend solutions",
+                        "Implementing modern development practices"
+                    ]
+                },
+                {
+                    title: "Data Analyst",
+                    company: "XtraLeap",
+                    duration: "Jan 2024 - Apr 2024",
+                    type: "Analytics",
+                    description: [
+                        "Developed dynamic JSON update service",
+                        "Built business intelligence dashboard",
+                        "Improved data synchronization"
+                    ]
+                }
+            ],
+            publications: [
+                {
+                    title: "Neural Network Performance Enhancement",
+                    date: "March 2024",
+                    description: "Research on improving image classification through grayscale preprocessing",
+                    link: "https://doi.org/publication-link"
+                }
+            ],
+            achievements: [
+                {
+                    title: "Research Paper Publication",
+                    description: "Published work on neural network optimization"
+                },
+                {
+                    title: "Dual Internship Success",
+                    description: "Selected for prestigious roles at IIIT Hyderabad and InfoAjax"
+                }
+            ]
+        };
+
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Helvetica', 'Arial', 'sans-serif'],
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Helvetica', Arial, sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #60A5FA, #34D399, #60A5FA);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 8s linear infinite;
+        }
+        .gradient-border {
+            background: linear-gradient(45deg, #60A5FA10, #34D39910);
+            border: 1px solid transparent;
+            border-image: linear-gradient(45deg, #60A5FA50, #34D39950) 1;
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px) scale(1.01);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .glass-effect {
+            background: rgba(17, 24, 39, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        @keyframes gradient {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+        .timeline-card::before {
+            content: '';
+            position: absolute;
+            left: -1rem;
+            top: 0.5rem;
+            height: 0.75rem;
+            width: 0.75rem;
+            border-radius: 50%;
+            background: #60A5FA;
+            z-index: 1;
+        }
+        .timeline-card::after {
+            content: '';
+            position: absolute;
+            left: -0.75rem;
+            top: 1.25rem;
+            height: calc(100% + 1rem);
+            width: 2px;
+            background: linear-gradient(to bottom, #60A5FA, transparent);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white flex flex-col min-h-screen">
+    <nav class="glass-effect fixed w-full z-50 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="font-bold text-2xl gradient-text">
+                        <script>document.write(aboutData.personalInfo.shortName)</script>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400 transition-all duration-300">Home</a>
+                        <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium text-blue-400 hover:text-blue-300 transition-all duration-300">About</a>
+                        <a href="projects.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400 transition-all duration-300">Projects</a>
+                        <a href="resume.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400 transition-all duration-300">Resume</a>
+                        <a href="skills.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400 transition-all duration-300">Skills</a>
+                        <a href="resources.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400 transition-all duration-300">Resources</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h1 class="text-5xl font-bold mb-4 gradient-text">About Me</h1>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    AI Researcher and Developer passionate about innovation
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <div class="lg:col-span-2 space-y-8">
+                    <div class="bg-gray-800 p-8 rounded-lg shadow-xl card-hover gradient-border">
+                        <h2 class="text-2xl font-bold mb-6 gradient-text">Professional Journey</h2>
+                        <div class="space-y-8 relative">
+                            <script>
+                                aboutData.experience.forEach(exp => {
+                                    document.write(`
+                                        <div class="relative pl-8 timeline-card">
+                                            <h3 class="text-xl font-bold">${exp.title}</h3>
+                                            <p class="text-blue-400">${exp.company} | ${exp.duration}</p>
+                                            <ul class="mt-2 space-y-2 text-gray-300">
+                                                ${exp.description.map(desc => `<li>• ${desc}</li>`).join('')}
+                                            </ul>
+                                        </div>
+                                    `);
+                                });
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-800 p-8 rounded-lg shadow-xl card-hover gradient-border">
+                        <h2 class="text-2xl font-bold mb-6 gradient-text">Research Publication</h2>
+                        <script>
+                            aboutData.publications.forEach(pub => {
+                                document.write(`
+                                    <div>
+                                        <h3 class="text-xl font-bold">${pub.title}</h3>
+                                        <p class="text-blue-400">${pub.date}</p>
+                                        <p class="text-gray-300 mt-2">${pub.description}</p>
+                                        <a href="${pub.link}" target="_blank" class="text-blue-400 hover:text-blue-300 mt-2 inline-block">
+                                            View Publication <i class="fas fa-external-link-alt ml-1"></i>
+                                        </a>
+                                    </div>
+                                `);
+                            });
+                        </script>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-xl card-hover gradient-border">
+                        <h2 class="text-xl font-bold mb-4 gradient-text">Education</h2>
+                        <script>
+                            const edu = aboutData.personalInfo.education;
+                            document.write(`
+                                <div class="space-y-2">
+                                    <h3 class="font-bold">${edu.degree}</h3>
+                                    <p class="text-gray-400">${edu.institution}</p>
+                                    <p class="text-gray-400">${edu.duration}</p>
+                                    <p class="text-blue-400">GPA: ${edu.gpa}</p>
+                                </div>
+                            `);
+                        </script>
+                    </div>
+
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-xl card-hover gradient-border">
+                        <h2 class="text-xl font-bold mb-4 gradient-text">Contact</h2>
+                        <div class="space-y-3">
+                            <script>
+                                const info = aboutData.personalInfo;
+                                document.write(`
+                                    <div class="flex items-center">
+                                        <i class="fas fa-envelope text-blue-400 w-6"></i>
+                                        <a href="mailto:${info.email}" class="ml-2 hover:text-blue-400">${info.email}</a>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-phone text-blue-400 w-6"></i>
+                                        <span class="ml-2">${info.phone}</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-map-marker-alt text-blue-400 w-6"></i>
+                                        <span class="ml-2">${info.location}</span>
+                                    </div>
+                                `);
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-xl card-hover gradient-border">
+                        <h2 class="text-xl font-bold mb-4 gradient-text">Languages</h2>
+                        <div class="space-y-3">
+                            <script>
+                                aboutData.personalInfo.languages.forEach(lang => {
+                                    document.write(`
+                                        <div class="flex items-center justify-between">
+                                            <span>${lang.name}</span>
+                                            <span class="text-blue-400">${lang.level}</span>
+                                        </div>
+                                    `);
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 mt-20">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <p>&copy; 2024 
+                    <script>document.write(aboutData.personalInfo.fullName)</script>
+                </p>
+                <div class="flex space-x-6">
+                    <a href="https://linkedin.com/in/gruhesh-sri-sai-karthik-kurra-178249227" target="_blank" class="hover:text-blue-400 transition duration-300">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="https://github.com/GruheshKurra" target="_blank" class="hover:text-blue-400 transition duration-300">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="mailto:gruheshkurra2@gmail.com" class="hover:text-blue-400 transition duration-300">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

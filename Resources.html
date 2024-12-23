@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - Karthik Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        const resourcesData = {
+            personalInfo: {
+                shortName: "Karthik",
+                fullName: "Gruhesh Sri Sai Karthik Kurra"
+            },
+            files: [
+                {
+                    name: "AWS Cloud Practitioner",
+                    type: "certificate",
+                    path: "certificates/c1.png",
+                    icon: "certificate",
+                    date: "2024-01-15"
+                },
+                {
+                    name: "AWS Solutions Architect",
+                    type: "certificate",
+                    path: "certificates/c2.png",
+                    icon: "certificate",
+                    date: "2024-02-20"
+                },
+                {
+                    name: "Google TensorFlow Developer",
+                    type: "certificate",
+                    path: "certificates/c3.png",
+                    icon: "certificate",
+                    date: "2024-03-10"
+                },
+                {
+                    name: "Red Hat Certified Developer",
+                    type: "certificate",
+                    path: "certificates/c4.png",
+                    icon: "certificate",
+                    date: "2024-03-25"
+                },
+                {
+                    name: "OCI Gen AI Professional",
+                    type: "certificate",
+                    path: "certificates/c5.png",
+                    icon: "certificate",
+                    date: "2024-04-01"
+                },
+                {
+                    name: "OCI Architect Associate",
+                    type: "certificate",
+                    path: "certificates/c6.png",
+                    icon: "certificate",
+                    date: "2023-12-15"
+                },
+                {
+                    name: "Research Paper - Neural Networks",
+                    type: "pdf",
+                    path: "papers/research.pdf",
+                    icon: "file-pdf",
+                    date: "2024-03-20"
+                },
+                {
+                    name: "IIIT Hyderabad Internship",
+                    type: "pdf",
+                    path: "letters/iiit_offer.pdf",
+                    icon: "file-pdf",
+                    date: "2024-05-01"
+                },
+                {
+                    name: "InfoAjax Offer Letter",
+                    type: "pdf",
+                    path: "letters/infoajax_offer.pdf",
+                    icon: "file-pdf",
+                    date: "2024-04-15"
+                }
+            ]
+        };
+
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Helvetica', 'Arial', 'sans-serif'],
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Helvetica', Arial, sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #60A5FA, #34D399, #60A5FA);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 8s linear infinite;
+        }
+        .glass-effect {
+            background: rgba(17, 24, 39, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .file-card {
+            transition: all 0.2s ease-in-out;
+        }
+        .file-card:hover {
+            transform: translateY(-2px);
+            background-color: rgba(55, 65, 81, 1);
+        }
+        .modal {
+            backdrop-filter: blur(8px);
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        @keyframes gradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white flex flex-col min-h-screen">
+    <nav class="glass-effect fixed w-full z-50 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="font-bold text-2xl gradient-text">
+                        <script>document.write(resourcesData.personalInfo.shortName)</script>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400 transition-all duration-300">Home</a>
+                        <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400 transition-all duration-300">About</a>
+                        <a href="projects.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400 transition-all duration-300">Projects</a>
+                        <a href="resume.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400 transition-all duration-300">Resume</a>
+                        <a href="skills.html" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400 transition-all duration-300">Skills</a>
+                        <a href="resources.html" class="px-3 py-2 rounded-md text-sm font-medium text-blue-400 hover:text-blue-300 transition-all duration-300">Resources</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal -->
+    <div id="fileModal" class="fixed inset-0 z-50 flex items-center justify-center hidden modal" onclick="closeModal()">
+        <div class="max-w-4xl w-full p-4" onclick="event.stopPropagation()">
+            <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden">
+                <div class="flex justify-between items-center p-4 border-b border-gray-700">
+                    <h3 id="modalTitle" class="text-xl font-bold"></h3>
+                    <button onclick="closeModal()" class="text-gray-400 hover:text-white">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div class="p-4">
+                    <img id="modalImage" class="w-full h-auto max-h-[80vh] object-contain" src="" alt="">
+                    <embed id="modalPdf" class="w-full h-[80vh] hidden" src="" type="application/pdf">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="flex-grow pt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h1 class="text-5xl font-bold mb-4 gradient-text">Resources</h1>
+                <p class="text-xl text-gray-400">Certificates, Papers, and Documents</p>
+            </div>
+
+            <div class="mb-8 flex justify-between items-center">
+                <div class="flex space-x-4">
+                    <button onclick="filterFiles('all')" class="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 transition duration-300">
+                        All Files
+                    </button>
+                    <button onclick="filterFiles('certificate')" class="px-4 py-2 rounded-lg bg-gray-700 hover:bg-gray-600 transition duration-300">
+                        Certificates
+                    </button>
+                    <button onclick="filterFiles('pdf')" class="px-4 py-2 rounded-lg bg-gray-700 hover:bg-gray-600 transition duration-300">
+                        Documents
+                    </button>
+                </div>
+                <div class="relative">
+                    <input type="text" 
+                           placeholder="Search files..." 
+                           class="px-4 py-2 bg-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                           onkeyup="searchFiles(this.value)">
+                    <i class="fas fa-search absolute right-3 top-3 text-gray-400"></i>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="filesGrid">
+                <script>
+                    resourcesData.files.forEach(file => {
+                        document.write(`
+                            <div class="file-card bg-gray-800 rounded-lg p-4 cursor-pointer" 
+                                 onclick="openFile('${file.path}', '${file.name}', '${file.type}')"
+                                 data-type="${file.type}">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-12 h-12 flex items-center justify-center bg-gray-700 rounded-lg">
+                                        <i class="fas fa-${file.icon} text-2xl text-blue-400"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="font-medium">${file.name}</h3>
+                                        <p class="text-sm text-gray-400">${new Date(file.date).toLocaleDateString()}</p>
+                                    </div>
+                                    <i class="fas fa-eye text-gray-400 hover:text-blue-400"></i>
+                                </div>
+                            </div>
+                        `);
+                    });
+                </script>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 mt-20">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <p>&copy; 2024 
+                    <script>document.write(resourcesData.personalInfo.fullName)</script>
+                </p>
+                <div class="flex space-x-6">
+                    <a href="https://linkedin.com/in/gruhesh-sri-sai-karthik-kurra-178249227" target="_blank" class="hover:text-blue-400 transition duration-300">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="https://github.com/GruheshKurra" target="_blank" class="hover:text-blue-400 transition duration-300">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="mailto:gruheshkurra2@gmail.com" class="hover:text-blue-400 transition duration-300">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openFile(path, name, type) {
+            const modal = document.getElementById('fileModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalImage = document.getElementById('modalImage');
+            const modalPdf = document.getElementById('modalPdf');
+
+            modalTitle.textContent = name;
+
+            if (type === 'certificate') {
+                modalImage.src = path;
+                modalImage.classList.remove('hidden');
+                modalPdf.classList.add('hidden');
+            } else {
+                modalPdf.src = path;
+                modalPdf.classList.remove('hidden');
+                modalImage.classList.add('hidden');
+            }
+
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('fileModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function filterFiles(type) {
+            const files = document.querySelectorAll('#filesGrid > div');
+            files.forEach(file => {
+                if (type === 'all' || file.dataset.type === type) {
+                    file.style.display = 'block';
+                } else {
+                    file.style.display = 'none';
+                }
+            });
+
+            document.querySelectorAll('button').forEach(btn => {
+                if (btn.textContent.toLowerCase().includes(type)) {
+                    btn.classList.remove('bg-gray-700');
+                    btn.classList.add('bg-blue-600');
+                } else {
+                    btn.classList.add('bg-gray-700');
+                    btn.classList.remove('bg-blue-600');
+                }
+            });
+        }
+
+        function searchFiles(query) {
+            const files = document.querySelectorAll('#filesGrid > div');
+            query = query.toLowerCase();
+            
+            files.forEach(file => {
+                const name = file.querySelector('h3').textContent.toLowerCase();
+                if (name.includes(query)) {
+                    file.style.display = 'block';
+                } else {
+                    file.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
